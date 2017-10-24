@@ -1,7 +1,9 @@
+//alert("holla");
+
 var user = {
 	firstName: "alexandria",
 	lastName: "procter",
-	emailAddress: "asporcter@gmail.com",
+	emailAddress: "asprocter@gmail.com",
 	age: 24,
 	property: [{
 		location: "london",
@@ -15,3 +17,9 @@ var user = {
 	}],
 	gender: "female"
 };
+
+console.log(user.firstName + " " + user.lastName);
+
+console.log(`${user.firstName} ${user.lastName}`); //this is a complex string. note that you have to use ` which are not normal quotation marks!
+
+console.log(user.property[1].type)
