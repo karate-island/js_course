@@ -4,7 +4,7 @@ var user = {
 	firstName: "Haruki",
 	lastName: "Marukami",
 	emailAddress: "marukami@gmail.com",
-	age: 40,
+	age: 32,
 	property: [{
 		location: "london",
 		type: "townhouse"
@@ -123,6 +123,21 @@ if (user.gender == "male" && user.maritalStatus == "divorced") {
 }
 
 
+//_______________DAY 4_____________________//
+
+switch(user.age) {
+	case 30:
+		alert('30');
+		break;
+	case 31:
+		alert('31');
+		break;
+	case 32:
+		alert('32');
+		break;
+	default:
+		alert("not 30, 31, or 32");
+}
 
 
 
