@@ -4,16 +4,19 @@ var user = {
 	firstName: "Haruki",
 	lastName: "Marukami",
 	emailAddress: "marukami@gmail.com",
-	age: 32,
+	age: 90,
 	property: [{
 		location: "london",
-		type: "townhouse"
+		type: "townhouse",
+		price: 8000000
 	}, {
 		location: "kenya",
-		type: "farm"
+		type: "farm",
+		price: 4000000
 	}, {
 		location: "cape town",
-		type: "apartment"
+		type: "apartment",
+		price: 5500000
 	}],
 	gender: "male",
 	maritalStatus: "divorced",
@@ -125,19 +128,97 @@ if (user.gender == "male" && user.maritalStatus == "divorced") {
 
 //_______________DAY 4_____________________//
 
-switch(user.age) {
-	case 30:
-		alert('30');
-		break;
-	case 31:
-		alert('31');
-		break;
-	case 32:
-		alert('32');
-		break;
-	default:
-		alert("not 30, 31, or 32");
+// switch(user.age) {
+// 	case 30:
+// 		alert('30');
+// 		break;
+// 	case 31:
+// 		alert('31');
+// 		break;
+// 	case 32:
+// 		alert('32');
+// 		break;
+// 	default:
+// 		alert("not 30, 31, or 32");
+// }
+
+
+//_______________DAY 4_____________________//
+console.log("_______________DAY 4_____________________")
+
+
+var workingHours = [
+	'08:00',
+	'09:00',
+	'10:00',
+	'11:00',
+	'12:00',
+	'14:00',
+	'15:00',
+	'16:00'
+];
+
+// var count = 0;
+// while(count < invoiceItems) {
+// 	console.log(count);
+
+// 	// currentValue = currentValue + 1
+// 	// currentValue += 1
+// 	count++
+// }
+
+// for(i=0;i<workingHours.length;i++) {
+// 	console.log( workingHours[i] );
+// }
+
+for(i=0;i<user.property.length;i++) {
+	console.log( user.property[i].location );
+};
+
+for(i=0;i<user.property.length;i++) {
+	console.log( user.property[i].price );
+};
+
+for(i=0;i<user.property.length;i++) {
+	if (user.property[i].price > 5000000) {
+		console.log(user.property[i].location + ": this propety costs more than R5 000 000");
+	} else {
+		console.log(user.property[i].location + ": this propety costs less than R5 000 000");
+	}
+};
+
+for(i=0;i<user.property.length;i++) {
+	if (user.property[i].type == "apartment") {
+		console.log(user.property[i].location + ": this property is an apartment!");
+	} else {
+		console.log(user.property[i].location + ": this property is not an apartment. It is a " + user.property[i].type + ".")
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
