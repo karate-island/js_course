@@ -260,11 +260,56 @@ var salary = user.salary,
 		deductions = calculateDeductions(user),
 		salaryAfterDeductions = salary - deductions;
 
-alert('Get ready');
 
-var salaryDiv = document.getElementById('userSalary');
 
-salaryDiv.innerHTML = salary;
+
+//-------------------- using js to dynamically change the html ---------------------
+console.log("--------------------------------------------");
+console.log("--------------------------------------------");
+
+
+var body = document.getElementsByTagName('body')[0]; //we have to put the [0] in here because the "getElements" method will always call an array, but we JUST want the body tag, so we specify for it in the array by using [0].
+var elements = body.getElementsByTagName("*"); //the * gives us every single tag
+
+
+for(i=0;i<elements.length;i++) { 		//looping through all the elements for the length of the list
+	var element = elements[i];			//selecting the element for that round of the loop
+
+	if(element.hasAttribute('data-content')){		//looking for an element that has the attribute "data-content"
+		var attributeValue = element.getAttribute('data-content');		//defining a new variable which will be whatever 'data-conent' is, i.e. the value of that attribute.
+
+		element.innerHTML = attributeValue;			//.innerHTML changes the HTML that is displayed on the page. so this command is taking the same element from above, and changing the HTML to be something new. inthis case it's change it to whatever 'data-content' is. data-content is predefined in the HTML.
+	}
+}
+
+console.log(elements);
+
+for(i=0;i<elements.length;i++) {
+
+	//i need to find the even numbered elements
+	//if the element number divided by 2 is an integer, i know it's even
+	//i want to make the even elements have a red background
+
+	var element = elements[i];
+
+	function isInt(n) {			//this is a function that is true if the number is even, and false if the number is odd
+	   return n % 2 === 0;		//it looks to see if the number is wholly divisable by 2
+	}
+
+	var evenElement = isInt(i);		//this runs the current element number through the function
+
+	console.log(evenElement);		//this should log "true, false, true. false, true, etc etc"
+
+	if(evenElement==true){			//this tests to see if that number is even, which would make the funcation true
+		element.style.backgroundColor= "red";
+	}
+
+	
+}
+
+
+
+
 
 
 
