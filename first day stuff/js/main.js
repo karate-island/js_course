@@ -298,7 +298,7 @@ for(i=0;i<elements.length;i++) {
 
 	var evenElement = isInt(i);		//this runs the current element number through the function
 
-	console.log(evenElement);		//this should log "true, false, true. false, true, etc etc"
+	console.log(evenElement);		//this should log "true, false, true, false, true, etc etc"
 
 	if(evenElement==true){			//this tests to see if that number is even, which would make the funcation true
 		element.style.backgroundColor= "red";
